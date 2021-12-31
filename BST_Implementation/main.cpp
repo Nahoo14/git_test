@@ -66,9 +66,9 @@ class Tree{
     }
     void display_helper(Node * curr){
         if (curr->left!=nullptr)
-            cout << curr->left << endl;
+            cout << curr->left->value << endl;
         else if(curr->right!=nullptr)
-            cout << curr->right << endl;
+            cout << curr->right->value << endl;
     }
     void display(){
         if(this->root==nullptr){
@@ -77,10 +77,9 @@ class Tree{
         else{
             cout << this->root->value << endl;
             Node * iter = this->root;
-            while((iter->left=nullptr)||(iter->right!=nullptr)){
+            while(iter!=nullptr){
                 display_helper(iter);
-                
-                }
+            }
         }
     } 
 
